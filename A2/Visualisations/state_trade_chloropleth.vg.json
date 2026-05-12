@@ -71,13 +71,13 @@
       {
         "field": "Export",
         "type": "quantitative",
-        "title": "Exports (US$ billion)",
+        "title": "Exports (RM billion)",
         "format": ",.2f"
       },
       {
         "field": "Import",
         "type": "quantitative",
-        "title": "Imports (US$ billion)",
+        "title": "Imports (RM billion)",
         "format": ",.2f"
       },
       {
