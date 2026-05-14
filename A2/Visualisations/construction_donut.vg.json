@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Construction Sector Breakdown",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Construction.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 80, "outerRadius": 150},
+      "encoding": {
+        "theta": {"field": "Share", "type": "quantitative"},
+        "color": {
+          "field": "Construction",
+          "type": "nominal",
+          "legend": {"title": "Sub-sector"},
+          "scale": {
+            "domain": [
+              "Special Trade Activities",
+              "Non-Residential Buildings",
+              "Residential Buildings",
+              "Civil Engineering"
+            ],
+            "range": ["#1D9E75", "#534AB7", "#D85A30", "#BA7517"]
+          }
+        },
+        "tooltip": [
+          {"field": "Construction", "type": "nominal", "title": "Sub-sector"},
+          {"field": "Share", "type": "quantitative", "title": "Share (%)"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "lineBreak": "\n"
+      },
+      "encoding": {
+        "text": {"value": ["Total Construction Output:", "RM53,246.84Mil"]}
+      }
+    }
+  ]
+}

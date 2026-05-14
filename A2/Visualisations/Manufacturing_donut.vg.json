@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Donut chart for manufacturing output",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Manufacturing.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 90,
+        "outerRadius": 160
+      },
+      "encoding": {
+        "theta": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "legend": {
+            "title": "Manufacturing Category"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Category"
+          },
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "Output (RM mil)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 16,
+        "fontWeight": "bold",
+        "lineBreak": "\n"
+      },
+      "data": {
+        "values": [
+          {
+            "text": {"value":["Total manufacturing output:", "nRM307500.501mil"]}
+          }
+        ]
+      },
+      "encoding": {
+        "text": {
+          "field": "text"
+        }
+      }
+    }
+  ],
+  "view": {
+    "stroke": null
+  }
+}

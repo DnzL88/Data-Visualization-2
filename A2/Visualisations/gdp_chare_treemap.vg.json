@@ -1,0 +1,564 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 900,
+  "height": 500,
+  "padding": 5,
+  "title": {
+    "text": "Malaysia GDP Structure — Sector & Sub-Sector Breakdown",
+    "subtitle": "Area = share of GDP · Hover for details",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "data": [
+    {
+      "name": "gdp_share",
+      "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/GDP_share.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Sector",
+          "as": "name"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum['GDP share'])",
+          "as": "size"
+        },
+        {
+          "type": "formula",
+          "expr": "0",
+          "as": "parent"
+        },
+        {
+          "type": "window",
+          "ops": [
+            "rank"
+          ],
+          "as": [
+            "rank"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.rank",
+          "as": "id"
+        }
+      ]
+    },
+    {
+      "name": "services_raw",
+      "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Services.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Services",
+          "as": "name"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum.Share)",
+          "as": "size"
+        },
+        {
+          "type": "formula",
+          "expr": "'Services'",
+          "as": "sector_name"
+        },
+        {
+          "type": "formula",
+          "expr": "1",
+          "as": "parent"
+        },
+        {
+          "type": "window",
+          "ops": [
+            "rank"
+          ],
+          "as": [
+            "rank"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "100 + datum.rank",
+          "as": "id"
+        }
+      ]
+    },
+    {
+      "name": "manufacturing_raw",
+      "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Manufacturing.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Manufacturing",
+          "as": "name"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum.Share)",
+          "as": "size"
+        },
+        {
+          "type": "formula",
+          "expr": "'Manufacturing'",
+          "as": "sector_name"
+        },
+        {
+          "type": "formula",
+          "expr": "2",
+          "as": "parent"
+        },
+        {
+          "type": "window",
+          "ops": [
+            "rank"
+          ],
+          "as": [
+            "rank"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "200 + datum.rank",
+          "as": "id"
+        }
+      ]
+    },
+    {
+      "name": "agriculture_raw",
+      "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Agriculture.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Agriculture",
+          "as": "name"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum.Share)",
+          "as": "size"
+        },
+        {
+          "type": "formula",
+          "expr": "'Agriculture'",
+          "as": "sector_name"
+        },
+        {
+          "type": "formula",
+          "expr": "3",
+          "as": "parent"
+        },
+        {
+          "type": "window",
+          "ops": [
+            "rank"
+          ],
+          "as": [
+            "rank"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "300 + datum.rank",
+          "as": "id"
+        }
+      ]
+    },
+    {
+      "name": "construction_raw",
+      "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Construction.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Construction",
+          "as": "name"
+        },
+        {
+          "type": "formula",
+          "expr": "toNumber(datum.Share)",
+          "as": "size"
+        },
+        {
+          "type": "formula",
+          "expr": "'Construction'",
+          "as": "sector_name"
+        },
+        {
+          "type": "formula",
+          "expr": "5",
+          "as": "parent"
+        },
+        {
+          "type": "window",
+          "ops": [
+            "rank"
+          ],
+          "as": [
+            "rank"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "500 + datum.rank",
+          "as": "id"
+        }
+      ]
+    },
+    {
+      "name": "tree",
+      "values": [
+        {
+          "id": 0,
+          "parent": null,
+          "name": "Malaysia GDP",
+          "size": null,
+          "sector_name": null
+        },
+        {
+          "id": 401,
+          "parent": 4,
+          "name": "Mining & Quarrying",
+          "size": 100,
+          "sector_name": "Mining & Quarrying"
+        },
+        {
+          "id": 601,
+          "parent": 6,
+          "name": "Others",
+          "size": 100,
+          "sector_name": "others"
+        }
+      ],
+      "transform": [
+        {
+          "type": "collect",
+          "sort": {
+            "field": "id"
+          }
+        }
+      ]
+    },
+    {
+      "name": "tree_sectors",
+      "source": "gdp_share",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Sector",
+          "as": "sector_name"
+        }
+      ]
+    },
+    {
+      "name": "all_nodes",
+      "source": [
+        "tree",
+        "tree_sectors",
+        "services_raw",
+        "manufacturing_raw",
+        "agriculture_raw",
+        "construction_raw"
+      ],
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "size",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "round": true,
+          "method": "squarify",
+          "ratio": 1.618,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "as": [
+            "x0",
+            "y0",
+            "x1",
+            "y1",
+            "depth",
+            "children"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sectors_layer",
+      "source": "all_nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 1"
+        }
+      ]
+    },
+    {
+      "name": "leaves_layer",
+      "source": "all_nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 2"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "sectorColor",
+      "type": "ordinal",
+      "domain": [
+        "Services",
+        "Manufacturing",
+        "Agriculture",
+        "Mining & Quarrying",
+        "Construction",
+        "others"
+      ],
+      "range": [
+        "#185FA5",
+        "#0F6E56",
+        "#3B6D11",
+        "#854F0B",
+        "#993C1D",
+        "#5F5E5A"
+      ]
+    },
+    {
+      "name": "leafOpacity",
+      "type": "linear",
+      "domain": [
+        0,
+        100
+      ],
+      "range": [
+        0.35,
+        1
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "leaves_layer"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x0",
+            "offset": 1
+          },
+          "y": {
+            "field": "y0",
+            "offset": 1
+          },
+          "x2": {
+            "field": "x1",
+            "offset": -1
+          },
+          "y2": {
+            "field": "y1",
+            "offset": -1
+          },
+          "fill": {
+            "scale": "sectorColor",
+            "field": "sector_name"
+          },
+          "fillOpacity": {
+            "scale": "leafOpacity",
+            "field": "size"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
+          "cornerRadius": {
+            "value": 3
+          },
+          "tooltip": {
+            "signal": "{'Sector': datum.sector_name, 'Sub-Sector': datum.name, 'Sub-Sector Share (%)': datum.size}"
+          }
+        },
+        "update": {
+          "fillOpacity": {
+            "scale": "leafOpacity",
+            "field": "size"
+          }
+        },
+        "hover": {
+          "fillOpacity": {
+            "value": 1
+          },
+          "strokeWidth": {
+            "value": 2.5
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "sectors_layer"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "value": "transparent"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 3
+          },
+          "cornerRadius": {
+            "value": 4
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "sectors_layer"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "datum.x0 + 6"
+          },
+          "y": {
+            "signal": "datum.y0 + 14"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "white"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "text": {
+            "signal": "(datum.x1 - datum.x0) > 60 ? datum.name + ' (' + datum.size + '%)' : ''"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves_layer"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x0 + datum.x1) / 2"
+          },
+          "y": {
+            "signal": "(datum.y0 + datum.y1) / 2"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "white"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "text": {
+            "signal": "(datum.x1 - datum.x0) > 55 && (datum.y1 - datum.y0) > 20 ? datum.size + '%' : ''"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves_layer"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x0 + datum.x1) / 2"
+          },
+          "y": {
+            "signal": "(datum.y0 + datum.y1) / 2 + 13"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "white"
+          },
+          "fontSize": {
+            "value": 9
+          },
+          "text": {
+            "signal": "(datum.x1 - datum.x0) > 80 && (datum.y1 - datum.y0) > 35 ? datum.name : ''"
+          }
+        }
+      }
+    }
+  ]
+}

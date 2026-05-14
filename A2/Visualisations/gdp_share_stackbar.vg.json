@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Malaysia GDP Share by Sector (2024)",
+  "width": 600,
+  "height": 80,
+  "data": {
+    "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/GDP_share.csv"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "field": "GDP share",
+      "type": "quantitative",
+      "stack": "normalize",
+      "axis": {
+        "title": "GDP Share (%)",
+        "format": ".0%"
+      }
+    },
+    "y": {
+      "axis": null
+    },
+    "color": {
+      "field": "Sector",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Services",
+          "Manufacturing",
+          "Agriculture",
+          "Mining & Quarrying",
+          "Construction",
+          "others"
+        ],
+        "range": [
+          "#1D9E75",
+          "#378ADD",
+          "#EF9F27",
+          "#D4537E",
+          "#7F77DD",
+          "#888780"
+        ]
+      },
+      "legend": {
+        "title": "Sector"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Sector",
+        "type": "nominal",
+        "title": "Sector"
+      },
+      {
+        "field": "GDP share",
+        "type": "quantitative",
+        "title": "GDP Share (%)"
+      }
+    ]
+  }
+}

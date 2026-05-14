@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Malaysia Services Sector Breakdown",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Services.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 100, "outerRadius": 180},
+      "encoding": {
+        "theta": {"field": "Share", "type": "quantitative"},
+        "color": {
+          "field": "Services",
+          "type": "nominal",
+          "legend": {"title": "Services Subsector"},
+          "scale": {
+            "domain": [
+              "Wholesale & Retail Trade",
+              "Food & Beverages & Accommodation",
+              "Utilities",
+              "Finance & Insurance",
+              "Real Estate & Business Services",
+              "Information & Communication",
+              "Transportation & Storage",
+              "Government Services",
+              "Other Services"
+            ],
+            "range": [
+              "#378ADD", "#D4537E", "#5DCAA5",
+              "#7F77DD", "#D85A30", "#BA7517",
+              "#639922", "#1D9E75", "#888780"
+            ]
+          }
+        },
+        "tooltip": [
+          {"field": "Services", "type": "nominal", "title": "Subsector"},
+          {"field": "Share", "type": "quantitative", "title": "Share (%)"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "text": ["Total service output:", "RM790,715.574mil"]
+      },
+      "encoding": {}
+    }
+  ]
+}
