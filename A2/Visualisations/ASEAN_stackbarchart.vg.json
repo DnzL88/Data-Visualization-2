@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "ASEAN GDP (2016–2024) in US$ Billion",
+  "width": 600,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/ASEAN_GDP.csv"
+  },
+  "transform": [
+    {
+      "fold": ["2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+      "as": ["Year", "GDP"]
+    },
+    {
+      "calculate": "toNumber(datum.Year)",
+      "as": "Year_num"
+    },
+    {
+      "calculate": "toNumber(datum.GDP)",
+      "as": "GDP_num"
+    }
+  ],
+  "mark": {"type": "area"},
+  "encoding": {
+    "x": {
+      "field": "Year_num",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "GDP_num",
+      "type": "quantitative",
+      "title": "GDP (US$ Billion)",
+      "stack": "zero"
+    },
+    "color": {
+      "field": "ASEAN Country",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Malaysia",
+          "Indonesia",
+          "Thailand",
+          "Philippines",
+          "Vietnam",
+          "Singapore",
+          "Myanmar",
+          "Cambodia",
+          "Laos",
+          "Brunei"
+        ],
+        "range": [
+          "#1565C0",
+          "#E65100",
+          "#2E7D32",
+          "#AD1457",
+          "#F9A825",
+          "#6A1B9A",
+          "#00838F",
+          "#C62828",
+          "#4E342E",
+          "#37474F"
+        ]
+      },
+      "legend": {"title": "Country"}
+    },
+    "tooltip": [
+      {"field": "ASEAN Country", "type": "nominal", "title": "Country"},
+      {"field": "Year_num", "type": "ordinal", "title": "Year"},
+      {"field": "GDP_num", "type": "quantitative", "title": "GDP (US$ Billion)", "format": ",.2f"}
+    ]
+  }
+}
