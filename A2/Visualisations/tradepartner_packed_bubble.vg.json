@@ -3,7 +3,7 @@
   "description": "Malaysia Export Trade Partners – Packed Bubble Chart (largest values centred)",
   "width": 200,
   "height": 300,
-  "padding": 10,
+  "padding": 1,
   "data": [
     {
       "name": "positions",
