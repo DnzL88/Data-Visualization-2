@@ -10,157 +10,157 @@
       "values": [
         {
           "name": "Singapore",
-          "x_target": 105,
+          "x_target": 55,
           "y_target": 95,
           "fixed": true
         },
         {
           "name": "United States",
-          "x_target": 195,
+          "x_target": 145,
           "y_target": 110,
           "fixed": true
         },
         {
           "name": "mainland China",
-          "x_target": 90,
+          "x_target": 40,
           "y_target": 180,
           "fixed": true
         },
         {
           "name": "Other",
-          "x_target": 10,
+          "x_target": -40,
           "y_target": 345,
           "fixed": true
         },
         {
           "name": "Hong Kong",
-          "x_target": 166,
+          "x_target": 116,
           "y_target": 196,
           "fixed": true
         },
         {
           "name": "Taiwan",
-          "x_target": 100,
+          "x_target": 50,
           "y_target": 255,
           "fixed": true
         },
         {
           "name": "Japan",
-          "x_target": 30,
+          "x_target": -20,
           "y_target": 128,
           "fixed": true
         },
         {
           "name": "Thailand",
-          "x_target": 12,
+          "x_target": -38,
           "y_target": 195,
           "fixed": true
         },
         {
           "name": "Vietnam",
-          "x_target": 19,
+          "x_target": -31,
           "y_target": 260,
           "fixed": true
         },
         {
           "name": "South Korea",
-          "x_target": 40,
+          "x_target": -10,
           "y_target": 320,
           "fixed": true
         },
         {
           "name": "India",
-          "x_target": 175,
+          "x_target": 125,
           "y_target": 270,
           "fixed": true
         },
         {
           "name": "Indonesia",
-          "x_target": 80,
+          "x_target": 30,
           "y_target": 365,
           "fixed": true
         },
         {
           "name": "Australia",
-          "x_target": 235,
+          "x_target": 185,
           "y_target": 182,
           "fixed": true
         },
         {
           "name": "Netherlands",
-          "x_target": 290,
+          "x_target": 240,
           "y_target": 220,
           "fixed": true
         },
         {
           "name": "Germany",
-          "x_target": 225,
+          "x_target": 175,
           "y_target": 240,
           "fixed": true
         },
         {
           "name": "Mexico",
-          "x_target": 263,
+          "x_target": 213,
           "y_target": 130,
           "fixed": true
         },
         {
           "name": "Philippines",
-          "x_target": 115,
+          "x_target": 65,
           "y_target": 315,
           "fixed": true
         },
         {
           "name": "Turkiye",
-          "x_target": 140,
+          "x_target": 90,
           "y_target": 380,
           "fixed": true
         },
         {
           "name": "United Arab Emirates",
-          "x_target": 180,
+          "x_target": 130,
           "y_target": 330,
           "fixed": true
         },
         {
           "name": "Bangladesh",
-          "x_target": 195,
+          "x_target": 145,
           "y_target": 375,
           "fixed": true
         },
         {
           "name": "United Kingdom",
-          "x_target": 290,
+          "x_target": 240,
           "y_target": 275,
           "fixed": true
         },
         {
           "name": "Italy",
-          "x_target": 250,
+          "x_target": 200,
           "y_target": 285,
           "fixed": true
         },
         {
           "name": "Belgium",
-          "x_target": 265,
+          "x_target": 215,
           "y_target": 325,
           "fixed": true
         },
         {
           "name": "Canada",
-          "x_target": 290,
+          "x_target": 240,
           "y_target": 170,
           "fixed": true
         },
         {
           "name": "France",
-          "x_target": 225,
+          "x_target": 175,
           "y_target": 320,
           "fixed": true
         },
         {
           "name": "Kenya",
-          "x_target": 240,
+          "x_target": 190,
           "y_target": 360,
           "fixed": true
         }
