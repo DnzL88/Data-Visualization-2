@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Malaysia Services Sector Breakdown",
-  "width": 400,
-  "height": 400,
+  "width": 200,
+  "height": 200,
   "data": {
     "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Services.csv"
   },
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 100, "outerRadius": 160},
+      "mark": {"type": "arc", "innerRadius": 60, "outerRadius": 100},
       "encoding": {
         "theta": {"field": "Share", "type": "quantitative"},
         "color": {
@@ -45,7 +45,7 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 9,
         "fontWeight": "bold",
         "text": ["Total service output:", "RM790,715.574mil"]
       },
