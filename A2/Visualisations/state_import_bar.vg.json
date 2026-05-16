@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Malaysia Imports by State (RM Billion)",
-  "width": 500,
-  "height": 350,
+  "width": 200,
+  "height": 380,
   "data": {
     "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Trade_by_states.csv"
   },
