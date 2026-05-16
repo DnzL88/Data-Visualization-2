@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Malaysia GDP Share by Sector (2024)",
-  "width": 600,
+  "width": 1000,
   "height": 80,
   "data": {
     "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/GDP_share.csv"
