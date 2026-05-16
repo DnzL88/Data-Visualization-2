@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "Malaysia Export Trade Partners – Packed Bubble Chart (largest values centred)",
-  "width": 350,
-  "height": 380,
+  "width": 200,
+  "height": 300,
   "padding": 10,
   "data": [
     {
@@ -331,7 +331,7 @@
       "fill": "color",
       "stroke": "stroke",
       "title": "Region",
-      "orient": "bottom",
+      "orient": "top",
       "direction": "horizontal",
       "symbolType": "circle",
       "symbolSize": 100,
