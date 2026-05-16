@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 150,
-  "height": 150,
+  "width": 200,
+  "height": 200,
   "data": {
     "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Construction.csv"
   },
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 50, "outerRadius": 80},
+      "mark": {"type": "arc", "innerRadius": 60, "outerRadius": 100},
       "encoding": {
         "theta": {"field": "Share", "type": "quantitative"},
         "color": {
