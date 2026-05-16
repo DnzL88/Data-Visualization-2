@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "Malaysia Export Trade Partners – Packed Bubble Chart (largest values centred)",
   "width": 100,
-  "height": 300,
+  "height": 200,
   "padding": 1,
   "data": [
     {
@@ -10,158 +10,158 @@
       "values": [
         {
           "name": "Singapore",
-          "x_target": 55,
-          "y_target": 95,
+          "x_target": -45,
+          "y_target": -105,
           "fixed": true
         },
         {
           "name": "United States",
-          "x_target": 145,
-          "y_target": 110,
+          "x_target": 45,
+          "y_target": -90,
           "fixed": true
         },
         {
           "name": "mainland China",
-          "x_target": 40,
-          "y_target": 180,
+          "x_target": -60,
+          "y_target": -20,
           "fixed": true
         },
         {
           "name": "Other",
-          "x_target": -40,
-          "y_target": 345,
+          "x_target": -140,
+          "y_target": 145,
           "fixed": true
         },
         {
           "name": "Hong Kong",
-          "x_target": 116,
-          "y_target": 196,
+          "x_target": 16,
+          "y_target": -4,
           "fixed": true
         },
         {
           "name": "Taiwan",
-          "x_target": 50,
-          "y_target": 255,
+          "x_target": -50,
+          "y_target": 55,
           "fixed": true
         },
         {
           "name": "Japan",
-          "x_target": -20,
-          "y_target": 128,
+          "x_target": -120,
+          "y_target": -72,
           "fixed": true
         },
         {
           "name": "Thailand",
-          "x_target": -38,
-          "y_target": 195,
+          "x_target": -138,
+          "y_target": -5,
           "fixed": true
         },
         {
           "name": "Vietnam",
-          "x_target": -31,
-          "y_target": 260,
+          "x_target": -131,
+          "y_target": 60,
           "fixed": true
         },
         {
           "name": "South Korea",
-          "x_target": -10,
-          "y_target": 320,
+          "x_target": -110,
+          "y_target": 120,
           "fixed": true
         },
         {
           "name": "India",
-          "x_target": 125,
-          "y_target": 270,
+          "x_target": 25,
+          "y_target": 70,
           "fixed": true
         },
         {
           "name": "Indonesia",
-          "x_target": 30,
-          "y_target": 365,
+          "x_target": -70,
+          "y_target": 165,
           "fixed": true
         },
         {
           "name": "Australia",
-          "x_target": 185,
-          "y_target": 182,
+          "x_target": 85,
+          "y_target": -18,
           "fixed": true
         },
         {
           "name": "Netherlands",
-          "x_target": 240,
-          "y_target": 220,
+          "x_target": 140,
+          "y_target": 20,
           "fixed": true
         },
         {
           "name": "Germany",
-          "x_target": 175,
-          "y_target": 240,
+          "x_target": 75,
+          "y_target": 40,
           "fixed": true
         },
         {
           "name": "Mexico",
-          "x_target": 213,
-          "y_target": 130,
+          "x_target": 113,
+          "y_target": -70,
           "fixed": true
         },
         {
           "name": "Philippines",
-          "x_target": 65,
-          "y_target": 315,
+          "x_target": -35,
+          "y_target": 115,
           "fixed": true
         },
         {
           "name": "Turkiye",
-          "x_target": 90,
-          "y_target": 380,
+          "x_target": -10,
+          "y_target": 180,
           "fixed": true
         },
         {
           "name": "United Arab Emirates",
-          "x_target": 130,
-          "y_target": 330,
+          "x_target": 30,
+          "y_target": 130,
           "fixed": true
         },
         {
           "name": "Bangladesh",
-          "x_target": 145,
-          "y_target": 375,
+          "x_target": 45,
+          "y_target": 175,
           "fixed": true
         },
         {
           "name": "United Kingdom",
-          "x_target": 240,
-          "y_target": 275,
+          "x_target": 140,
+          "y_target": 75,
           "fixed": true
         },
         {
           "name": "Italy",
-          "x_target": 200,
-          "y_target": 285,
+          "x_target": 100,
+          "y_target": 85,
           "fixed": true
         },
         {
           "name": "Belgium",
-          "x_target": 215,
-          "y_target": 325,
+          "x_target": 115,
+          "y_target": 125,
           "fixed": true
         },
         {
           "name": "Canada",
-          "x_target": 240,
-          "y_target": 170,
+          "x_target": 140,
+          "y_target": -30,
           "fixed": true
         },
         {
           "name": "France",
-          "x_target": 175,
-          "y_target": 320,
+          "x_target": 75,
+          "y_target": 120,
           "fixed": true
         },
         {
           "name": "Kenya",
-          "x_target": 190,
-          "y_target": 360,
+          "x_target": 90,
+          "y_target": 160,
           "fixed": true
         }
       ]
@@ -331,7 +331,7 @@
       "fill": "color",
       "stroke": "stroke",
       "title": "Region",
-      "orient": "top",
+      "orient": "bottom",
       "direction": "horizontal",
       "symbolType": "circle",
       "symbolSize": 100,

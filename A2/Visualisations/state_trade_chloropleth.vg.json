@@ -14,7 +14,7 @@
   "projection": {
     "type": "mercator",
     "center": [108.5, 4],
-    "scale": 3000
+    "scale": 2600
   },
   "data": {
     "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/malaysia_states.topojson",
@@ -57,7 +57,7 @@
         "format": "+.1f",
         "gradientLength": 150,
         "orient": "none",
-        "legendX": 300,
+        "legendX": 335,
         "legendY": 10,
         "direction": "horizontal"
     }
