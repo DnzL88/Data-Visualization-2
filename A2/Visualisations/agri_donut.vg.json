@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Construction Sector Breakdown",
+  "description": "Agriculture sector breakdown donut chart",
   "width": 300,
   "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Construction.csv"
+    "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Agriculture.csv"
   },
   "layer": [
     {
@@ -12,21 +12,12 @@
       "encoding": {
         "theta": {"field": "Share", "type": "quantitative"},
         "color": {
-          "field": "Construction",
+          "field": "Agriculture",
           "type": "nominal",
-          "legend": {"title": "Sub-sector"},
-          "scale": {
-            "domain": [
-              "Special Trade Activities",
-              "Non-Residential Buildings",
-              "Residential Buildings",
-              "Civil Engineering"
-            ],
-            "range": ["#1D9E75", "#534AB7", "#D85A30", "#BA7517"]
-          }
+          "legend": {"title": "Agriculture Subsector"}
         },
         "tooltip": [
-          {"field": "Construction", "type": "nominal", "title": "Sub-sector"},
+          {"field": "Agriculture", "type": "nominal", "title": "Subsector"},
           {"field": "Share", "type": "quantitative", "title": "Share (%)"}
         ]
       }
@@ -41,8 +32,9 @@
         "lineBreak": "\n"
       },
       "encoding": {
-        "text": {"value": ["Total Construction Output:", "RM53,246.84Mil"]}
+        "text": {"value": ["Total Agriculture Output:", "RM83,863.77 mil"]}
       }
     }
   ]
 }
+

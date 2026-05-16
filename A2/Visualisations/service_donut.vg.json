@@ -8,7 +8,7 @@
   },
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 100, "outerRadius": 180},
+      "mark": {"type": "arc", "innerRadius": 100, "outerRadius": 160},
       "encoding": {
         "theta": {"field": "Share", "type": "quantitative"},
         "color": {

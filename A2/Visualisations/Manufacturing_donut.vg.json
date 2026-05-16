@@ -1,68 +1,38 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Donut chart for manufacturing output",
-  "width": 400,
-  "height": 400,
+  "description": "Manufacturing output breakdown donut chart",
+  "width": 350,
+  "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/Manufacturing.csv"
   },
   "layer": [
     {
-      "mark": {
-        "type": "arc",
-        "innerRadius": 90,
-        "outerRadius": 160
-      },
+      "mark": {"type": "arc", "innerRadius": 100, "outerRadius": 160},
       "encoding": {
-        "theta": {
-          "field": "value",
-          "type": "quantitative"
-        },
+        "theta": {"field": "Share", "type": "quantitative"},
         "color": {
-          "field": "category",
+          "field": "Manufacturing",
           "type": "nominal",
-          "legend": {
-            "title": "Manufacturing Category"
-          }
+          "legend": {"title": "Sector"}
         },
         "tooltip": [
-          {
-            "field": "category",
-            "type": "nominal",
-            "title": "Category"
-          },
-          {
-            "field": "value",
-            "type": "quantitative",
-            "title": "Output (RM mil)"
-          }
+          {"field": "Manufacturing", "type": "nominal", "title": "Sector"},
+          {"field": "Share", "type": "quantitative", "title": "Share (%)"}
         ]
       }
     },
     {
       "mark": {
         "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "fontSize": 16,
+        "radius": 0,
+        "fontSize": 13,
         "fontWeight": "bold",
         "lineBreak": "\n"
       },
-      "data": {
-        "values": [
-          {
-            "text": {"value":["Total manufacturing output:", "nRM307500.501mil"]}
-          }
-        ]
-      },
       "encoding": {
-        "text": {
-          "field": "text"
-        }
+        "text": {"value": ["Total manufacturing output:", "RM307,500.501 mil"]}
       }
     }
-  ],
-  "view": {
-    "stroke": null
-  }
+  ]
 }
