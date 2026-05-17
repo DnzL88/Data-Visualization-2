@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Malaysia GDP by State (MYR millions)",
-  "width": 400,
+  "width": 350,
   "height": 450,
   "projection": {
     "type": "equalEarth"
@@ -42,7 +42,9 @@
       },
       "legend": {
         "title": "GDP (MYR millions)",
-        "format": ",.0f"
+        "format": ",.0f",
+        "orient": "top",
+        "direction": "horizontal"
       }
     },
     "tooltip": [
