@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DnzL88/Data-Visualization-2@main/A2/dashboard.css" />
 </head>
 <body>
  
@@ -28,7 +28,6 @@
   ══════════════════════════════════════════ -->
   <section class="section" id="section1">
     <div class="section-header">
-      <div class="section-number">Section 01</div>
       <h2 class="section-title">Malaysia's GDP Breakdown</h2>
     </div>
  
@@ -49,7 +48,7 @@
         <div class="card-desc"></div>
         <div id="share-growth" style="height: 340px;">
         </div>
-        <div class="insight-box"><p>fill it here</p></div>
+        <div class="insight-box"><p>`</p></div>
       </div>
     </div>
     <script>
@@ -66,7 +65,7 @@
       <div class="card">
         <div class="card-label">National Overview</div>
         <div class="card-title">GDP Share by Sector (2024)</div>
-        <div class="card-desc">fill it here</div>
+        <div class="card-desc">`</div>
 
         <!-- Give the placeholder an id, remove the text inside -->
         <div id="gdp-share-chart" style="height: 120px;"></div>
@@ -131,9 +130,8 @@
   ══════════════════════════════════════════ -->
   <section class="section" id="section2">
     <div class="section-header">
-      <div class="section-number">Section 02</div>
       <h2 class="section-title">Trade & Export Partners</h2>
-      <p class="section-desc">fill it here</p>
+      <p class="section-desc">`</p>
     </div>
  
     <!-- Row 1: chloropleth map (full width) -->
@@ -141,7 +139,7 @@
       <div class="card">
         <div class="card-label">Trade Balance</div>
         <div class="card-title">Net Export Balance by State</div>
-        <div class="card-desc">fill it here</div>
+        <div class="card-desc">`</div>
         <div id="trade-chloropleth" style="height: 420px;"></div>
       </div>
     </div>
@@ -158,19 +156,19 @@
       <div class="card">
         <div class="card-label">Exports by State</div>
         <div class="card-title">State Export Values (RM Billion)</div>
-        <div class="card-desc">fill it here</div>
+        <div class="card-desc">`</div>
         <div id="state-export-bar" style="height: 300px;"></div>
       </div>
       <div class="card">
         <div class="card-label">Imports by State</div>
         <div class="card-title">State Import Values (RM Billion)</div>
-        <div class="card-desc">fill it here</div>
+        <div class="card-desc">`</div>
         <div id="state-import-bar" style="height: 300px;"></div>
       </div>
       <div class="card">
         <div class="card-label">Global Export Partners</div>
         <div class="card-title">Malaysia's Top Export Destinations</div>
-        <div class="card-desc">fill it here</div>
+        <div class="card-desc">`</div>
         <div id="trade-bubble" style="height: 300px; width: 250px;"></div>
       </div>
     </div>
@@ -191,9 +189,8 @@
   ══════════════════════════════════════════ -->
   <section class="section" id="section3">
     <div class="section-header">
-      <div class="section-number">Section 03</div>
       <h2 class="section-title">Malaysia in ASEAN Context</h2>
-      <p class="section-desc">fill it here</p>
+      <p class="section-desc">Let's compare Malaysia's economy with our neighbours.</p>
     </div>
  
     <!-- Row 1: Stacked area (full width) -->
@@ -204,7 +201,7 @@
         <div class="card-desc">fill it here</div>
         <div id="stack-area" style="height: 360px;">
         </div>
-        <div class="insight-box"><p>fill it here</p></div>
+        <div class="insight-box"><p>`</p></div>
       </div>
     </div>
     <script>
@@ -220,7 +217,6 @@
       <div class="card">
         <div class="card-label">Rankings</div>
         <div class="card-title">ASEAN GDP Rankings (2016–2024)</div>
-        <div class="card-desc">fill it here</div>
         <div id="ASEAN-rank" style="height: 340px;">
         </div>
       </div>
@@ -228,10 +224,12 @@
         <div>
           <div class="card-label">Key Takeaway</div>
           <div class="card-title">Malaysia's ASEAN Position</div>
-          <div class="card-desc">fill it here</div>
+          <div class="card-desc">- Political instability affected Malaysia's economy since 2018.</div>
+          <div class="card-desc">- Workforce population is a GDP factor which makes countries such as Indonesia, 
+            Thailand, Philippines higher than Malaysia's.</div>
         </div>
         <div class="insight-box">
-          <p>fill it here</p>
+          <p>Thank you for Viewing.</p>
         </div>
       </div>
     </div>
@@ -239,11 +237,6 @@
     vegaEmbed('#ASEAN-rank', baseUrl + 'ASEAN_rank_line.vg.json', opts);
   </script>
   </section>
- 
-  <!-- FOOTER -->
-  <footer>
-    <p>Data sources: <span>Department of Statistics Malaysia · World Bank</span> &nbsp;|&nbsp; Visualisations built with Vega-Lite v5</p>
-  </footer>
  
 </body>
 </html>
