@@ -5,7 +5,10 @@
   "height": 250,
   "projection": {
     "type": "equalEarth",
-    "center": [108.5, 4],
+    "center": [
+      108.5,
+      4
+    ],
     "scale": 1700
   },
   "data": {
@@ -15,52 +18,95 @@
       "feature": "gadm41_MYS_1"
     }
   },
-  "transform": [
+  "layer": [
     {
-      "lookup": "properties.NAME_1",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/GDP_by_state.csv"
+      "transform": [
+        {
+          "lookup": "properties.NAME_1",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/Dataset_files/GDP_by_state.csv"
+            },
+            "key": "Country",
+            "fields": [
+              "precentage"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "color": {
+          "field": "precentage",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "blues"
+          },
+          "legend": {
+            "title": "Percentage of GDP (%)",
+            "format": ",.0f",
+            "orient": "top",
+            "direction": "horizontal"
+          }
         },
-        "key": "Country",
-        "fields": [
-          "precentage"
+        "tooltip": [
+          {
+            "field": "properties.NAME_1",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "precentage",
+            "type": "quantitative",
+            "title": "Percentage of GDP",
+            "format": ",.0f"
+          }
         ]
       }
-    }
-    
-  ],
-  "mark": {
-    "type": "geoshape",
-    "stroke": "black",
-    "strokeWidth": 0.8
-  },
-  "encoding": {
-    "color": {
-      "field": "precentage",
-      "type": "quantitative",
-      "scale": {
-        "scheme": "blues"
-      },
-      "legend": {
-        "title": "Percentage of GDP (%)",
-        "format": ",.0f",
-        "orient": "top",
-        "direction": "horizontal"
-      }
     },
-    "tooltip": [
-      {
-        "field": "properties.NAME_1",
-        "type": "nominal",
-        "title": "State"
+    {
+      "data": {
+        "values": [
+          {
+            "longitude": 101.5,
+            "latitude": 1.1,
+            "text": ["KL & Selangor are the", "economic hub of Malaysia"]
+          },
+          {
+            "longitude": 110,
+            "latitude": 4,
+            "text": ["East Malaysia's GDP is built", "on natural resources"]
+          },
+          {
+            "longitude": 105,
+            "latitude": 6,
+            "text": ["Penang's GDP is built", "on tourism"]
+          }
+        ]
       },
-      {
-        "field": "precentage",
-        "type": "quantitative",
-        "title": "Percentage of GDP",
-        "format": ",.0f"
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "black"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        }
       }
-    ]
-  }
-}  
+    }
+  ]
+}
