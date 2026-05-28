@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Malaysia GDP by State (MYR millions)",
-  "width": 500,
-  "height": 200,
+  "width": 550,
+  "height": 250,
   "projection": {
     "type": "equalEarth",
     "center": [108.5, 4],
-    "scale": 1600
+    "scale": 1700
   },
   "data": {
     "url": "https://raw.githubusercontent.com/DnzL88/Data-Visualization-2/refs/heads/main/A2/malaysia_states.topojson",
@@ -24,7 +24,7 @@
         },
         "key": "Country",
         "fields": [
-          "GDP(million)"
+          "precentage"
         ]
       }
     }
@@ -37,13 +37,13 @@
   },
   "encoding": {
     "color": {
-      "field": "GDP(million)",
+      "field": "precentage",
       "type": "quantitative",
       "scale": {
         "scheme": "blues"
       },
       "legend": {
-        "title": "GDP (MYR millions)",
+        "title": "Percentage of GDP (%)",
         "format": ",.0f",
         "orient": "top",
         "direction": "horizontal"
@@ -56,9 +56,9 @@
         "title": "State"
       },
       {
-        "field": "GDP(million)",
+        "field": "precentage",
         "type": "quantitative",
-        "title": "GDP (MYR millions)",
+        "title": "Percentage of GDP",
         "format": ",.0f"
       }
     ]
