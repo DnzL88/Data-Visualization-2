@@ -17,9 +17,11 @@
   <header class="hero">
     <div class="hero-label">Data Visualisation 2 · FIT2179</div>
     <h1>Malaysia's Economical Status</h1>
-    <p class="hero-meta">This dashboard will go through the breakdown of Malaysia's Economy, such as its GDP, Trade, and how
+    <h3>This dashboard will go through the breakdown of Malaysia's Economy, such as its GDP, Trade,</h3>
+    <h3> and how well it performs in comparison with other South East Asian Countries.</h3>
+    <!-- <p class="hero-meta">This dashboard will go through the breakdown of Malaysia's Economy, such as its GDP, Trade, and how
       well it performs in comparison with other South East Asian Countries.
-    </p>
+    </p> -->
   </header>
  
  
@@ -38,7 +40,7 @@
         <div class="card-label">State-Level GDP</div>
         <div class="card-title">GDP by Malaysian State (MYR millions)</div>
         <div class="card-desc"></div>
-        <div id="chloro-gdp" style="height: 340px;">
+        <div id="chloro-gdp" style="width: 630px;">
         </div>
       </div>
  
@@ -46,7 +48,7 @@
         <div class="card-label">State Growth</div>
         <div class="card-title">GDP Growth by State (% from 2023)</div>
         <div class="card-desc"></div>
-        <div id="share-growth" style="height: 340px;">
+        <div id="share-growth" style="width: 300px;">
         </div>
         <div class="insight-box"><p>`</p></div>
       </div>
@@ -157,19 +159,19 @@
         <div class="card-label">Exports by State</div>
         <div class="card-title">State Export Values (RM Billion)</div>
         <div class="card-desc">`</div>
-        <div id="state-export-bar" style="height: 300px;"></div>
+        <div id="state-export-bar" style="width: 285px;"></div>
       </div>
       <div class="card">
         <div class="card-label">Imports by State</div>
         <div class="card-title">State Import Values (RM Billion)</div>
         <div class="card-desc">`</div>
-        <div id="state-import-bar" style="height: 300px;"></div>
+        <div id="state-import-bar" style="width: 285px;"></div>
       </div>
       <div class="card">
         <div class="card-label">Global Export Partners</div>
         <div class="card-title">Malaysia's Top Export Destinations</div>
         <div class="card-desc">`</div>
-        <div id="trade-bubble" style="height: 300px; width: 250px;"></div>
+        <div id="trade-bubble" style="width: 330px;"></div>
       </div>
     </div>
 
@@ -237,6 +239,12 @@
     vegaEmbed('#ASEAN-rank', baseUrl + 'ASEAN_rank_line.vg.json', opts);
   </script>
   </section>
- 
+  
+  <footer>
+    <p>Data sources: <span><a href= "https://www.dosm.gov.my/portal-main/home">Department of Statistics Malaysia</a> · <a href="https://databank.worldbank.org/source/world-development-indicators#">World Bank</a>
+    · <a href = "https://www.statista.com/statistics/796245/gdp-of-the-asean-countries/?srsltid=AfmBOoqQZciZS9TMyY-XAOS21nglRMY2ZdfAz08e9AhQ-BspUpA8tvAz">Statista</a>
+    · <a href="https://en.wikipedia.org/wiki/List_of_states_and_federal_territories_of_Malaysia_by_GDP">Wikipedia</a>
+    </span> </p>
+  </footer>
 </body>
 </html>
