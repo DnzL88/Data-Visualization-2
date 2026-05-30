@@ -2,12 +2,12 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Malaysia GDP by State (MYR millions)",
   "width": 550,
-  "height": 250,
+  "height": 350,
   "projection": {
     "type": "equalEarth",
     "center": [
       108.5,
-      4
+      2.5
     ],
     "scale": 1700
   },
@@ -85,6 +85,11 @@
             "longitude": 105,
             "latitude": 6,
             "text": ["Penang's GDP is built", "on tourism"]
+          },
+          {
+            "longitude": 107,
+            "latitude": -2,
+            "text": ["Service, Manufacturing, Agriculture, and Mining are leading sectors of Malaysia's GDP"]
           }
         ]
       },
