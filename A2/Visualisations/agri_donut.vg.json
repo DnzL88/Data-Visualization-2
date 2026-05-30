@@ -14,7 +14,19 @@
         "color": {
           "field": "Agriculture",
           "type": "nominal",
-          "legend": {"title": "Agriculture Subsector"}
+          "legend": {"title": "Agriculture Subsector"},
+          "scale": {
+            "domain": ["Fishing", 
+                        "Forestry & Logging", 
+                        "Livestock", 
+                        "Other Agriculture", 
+                        "Palm oil", 
+                        "Rubber"],
+            "range": [
+                      "#1F78B4", "#8C6D31", 
+                      "#E69F00", "#BDBDBD", 
+                      "#6A3D9A", "#FDD835"]
+          }
         },
         "tooltip": [
           {"field": "Agriculture", "type": "nominal", "title": "Subsector"},

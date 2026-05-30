@@ -14,7 +14,19 @@
         "color": {
           "field": "Manufacturing",
           "type": "nominal",
-          "legend": {"title": "Sector"}
+          "legend": {"title": "Sector"},
+          "scale": {
+            "domain": ["Electrical, Electronic & Optical Products", 
+                        "Petroleum, Chemical, Rubber, and Plastic Products", 
+                        "Transport Equipment, Other Manufacturing & Repair", 
+                        "Non-Metallic Mineral Products & Metal products", 
+                        "Vegetable & Animal Oils & Fats", 
+                        "others"],
+            "range": ["#1D3557", "#D81B60", 
+                      "#00ACC1", "#757575", 
+                      "#FFB74D", "#D9D9D9"  
+                    ]
+          }
         },
         "tooltip": [
           {"field": "Manufacturing", "type": "nominal", "title": "Sector"},

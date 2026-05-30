@@ -18,10 +18,7 @@
           "scale": {
             "domain": [
               "Wholesale & Retail Trade",
-              "Food & Beverages & Accommodation",
-              "Utilities",
-              "Finance & Insurance",
-              "Real Estate & Business Services",
+              "Financial & Real Estate",
               "Information & Communication",
               "Transportation & Storage",
               "Government Services",
@@ -29,8 +26,7 @@
             ],
             "range": [
               "#378ADD", "#D4537E", "#5DCAA5",
-              "#7F77DD", "#D85A30", "#BA7517",
-              "#639922", "#1D9E75", "#888780"
+              "#630022", "#1D9E75", "#888780"
             ]
           }
         },
